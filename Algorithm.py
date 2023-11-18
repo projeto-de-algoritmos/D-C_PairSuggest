@@ -53,9 +53,53 @@ persons_list = [
     {'name': 'Charlie', 'preferences': [6, 5, 4, 3, 2, 1]},
 ]
 
+persons_list_c = persons_list.copy()
 
 threshold = 5
 
-for person in persons_list:
-    similar_tastes = find_similar_tastes(person, persons_list, threshold)
-    print(f"{person['name']}'s similar tastes: {[p['name'] for p in similar_tastes]}")
+while True:
+    print('######Temporary Menu#######')
+    print('Selecione uma opção')
+    print('1.- Inserir um trabalhador')
+    print('2.- Mostrar trabalhadores')
+    print('3.- Eliminar trabalhador')
+    print('4.- Fazer pares')
+    print('5.- Sair')
+
+    option = input()
+    
+    if option == '1':
+        new_person = input('Insere nome de trabalhador')
+        new_person_scores = []
+        #Score 1
+        score = input('score 1')
+        new_person_scores.append(score)
+        #Score 2
+        score = input('score 2')
+        new_person_scores.append(score)
+        #Score 3
+        score = input('score 3')
+        new_person_scores.append(score)
+        #Score 4
+        score = input('score 4')
+        new_person_scores.append(score)
+        #Score 5
+        score = input('score 5')
+        new_person_scores.append(score)
+        #Score 6
+        score = input('score 6')
+        new_person_scores.append(score)
+
+        new_person_format = {'name': new_person,'preferences': new_person_scores}
+        persons_list.append(new_person_format)
+    elif option == '2':
+        for person in persons_list:
+            print(f"{person['name']}: {person['preferences']}")
+    elif option == '3':
+        print("wip")
+    elif option == '4':
+        for person in persons_list:
+            similar_tastes = find_similar_tastes(person, persons_list, threshold)
+            print(f"{person['name']}'s similar tastes: {[p['name'] for p in similar_tastes]}")
+    elif option == '5':
+        break
