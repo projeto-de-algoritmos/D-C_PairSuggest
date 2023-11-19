@@ -40,12 +40,19 @@ def are_similar_taste(person1, person2, threshold):
     inversions = count_inversions(combined_preferences)
     return inversions <= threshold
 
-def find_similar_tastes(person, persons_list, threshold):
-    similar_tastes = []
-    for other_person in persons_list:
-        if person != other_person and are_similar_taste(person, other_person, threshold):
-            similar_tastes.append(other_person)
-    return similar_tastes
+def find_similar_pairs(persons_list, threshold):
+    similar_pairs = []
+
+    for i, person1 in enumerate(persons_list):
+        found_pair = False 
+
+        for j, person2 in enumerate(persons_list):
+            if i < j and not found_pair:  
+                if are_similar_taste(person1, person2, threshold):
+                    similar_pairs.append((person1['name'], person2['name']))
+                    found_pair = True  
+
+    return similar_pairs
 
 persons_list = [
     {'name': 'Alice', 'preferences': [1, 3, 5, 2, 4, 6]},
@@ -53,9 +60,8 @@ persons_list = [
     {'name': 'Charlie', 'preferences': [6, 5, 4, 3, 2, 1]},
 ]
 
-persons_list_c = persons_list.copy()
 
-threshold = 5
+threshold = 1200
 
 while True:
     print('######Temporary Menu#######')
@@ -98,8 +104,11 @@ while True:
     elif option == '3':
         print("wip")
     elif option == '4':
-        for person in persons_list:
-            similar_tastes = find_similar_tastes(person, persons_list, threshold)
-            print(f"{person['name']}'s similar tastes: {[p['name'] for p in similar_tastes]}")
+        persons_list_c = persons_list.copy()
+        similar_pairs = find_similar_pairs(persons_list, threshold)
+
+        print(f"Pairs of employees:")
+        for pair in similar_pairs:
+            print(f"{pair[0]} and {pair[1]}")
     elif option == '5':
         break
