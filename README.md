@@ -1,38 +1,26 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# PairSuggest
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 4<br>
+**Conteúdo da Disciplina**: D&C<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 21/1006957  |  Sebastián Hector Zuzunaga Rosado |
+
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Usar o algoritmo de contage de investimentos para sugerir pares de trabalho baseados nos gostos dos empregados, isto ajudará a que se entendam melhor e facilitará a cooperação entre eles.
+Serão sugeridos todos os possíveis pares que possam ser gerados entre empregados com gostos similares baseados num número máximo de investimentos para que se considerem similares, se é que uma pessoa não tem gostos similares a ninguém isto será avisado junto com os nomes dessas pessoas.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python<br>
+**Pré-requisitos**: <br>
+- Python
+- PowerShell
 
 ## Uso 
 Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
