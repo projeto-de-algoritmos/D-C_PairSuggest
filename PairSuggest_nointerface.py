@@ -63,7 +63,7 @@ def delete_person(person_name, persons_list):
             persons_list.remove(person)
             print(f"{person_name} removido.")
             return
-    print(f"{person_name} não encontradod.")
+    print(f"{person_name} não encontrado.")
 
 def validate_score(message):
     while True:
