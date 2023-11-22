@@ -14,7 +14,11 @@ Usar o algoritmo de contage de investimentos para sugerir pares de trabalho base
 Serão sugeridos todos os possíveis pares que possam ser gerados entre empregados com gostos similares baseados num número máximo de investimentos para que se considerem similares, se é que uma pessoa não tem gostos similares a ninguém isto será avisado junto com os nomes dessas pessoas.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![image](https://github.com/projeto-de-algoritmos/D-C_PairSuggest/assets/98188828/c936f308-9b91-440d-8906-cbe308023b74)
+
+![image](https://github.com/projeto-de-algoritmos/D-C_PairSuggest/assets/98188828/e1c4fa90-f019-400b-a68a-441457224327)
+
+![image](https://github.com/projeto-de-algoritmos/D-C_PairSuggest/assets/98188828/dd8ac32c-c379-4e4c-a44c-b2b21447f33a)
 
 ## Instalação 
 **Linguagem**: Python<br>
