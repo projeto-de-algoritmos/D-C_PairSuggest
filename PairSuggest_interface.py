@@ -4,7 +4,7 @@ from tkinter import messagebox
 class EmployeePairingApp:
     def __init__(self, master):
         self.master = master
-        master.title("Employee Pairing App")
+        master.title("Aplicação para criação de duplas")
 
         self.persons_list = []
         self.threshold = 20
@@ -12,7 +12,7 @@ class EmployeePairingApp:
         self.create_widgets()
 
     def create_widgets(self):
-        self.label = tk.Label(self.master, text="Employee Pairing App")
+        self.label = tk.Label(self.master, text="Aplicação para criação de duplas")
         self.label.pack()
 
         self.add_button = tk.Button(self.master, text="Inserir um trabalhador", command=self.add_person)
@@ -91,20 +91,21 @@ class EmployeePairingApp:
         similar_pairs, unpaired_indices = self.find_similar_pairs()
 
         pairs_window = tk.Toplevel(self.master)
-        pairs_window.title("Trabalhadores com dupla")
+        pairs_window.title("Trabalhadores com e sem dupla")
 
         if not similar_pairs:
             tk.Label(pairs_window, text="Nenhuma dupla foi encontrada.").pack()
         else:
+            tk.Label(pairs_window, text="Trabalhadores com dupla:").pack()
             for pair in similar_pairs:
                 tk.Label(pairs_window, text=f"{pair[0]} e {pair[1]}").pack()
 
-            if unpaired_indices:
-                unpaired_window = tk.Toplevel(self.master)
-                unpaired_window.title("Trabalhadores sem dupla")
+        if unpaired_indices:
+            tk.Label(pairs_window, text="Trabalhadores sem dupla:").pack()
+            for idx in unpaired_indices:
+                tk.Label(pairs_window, text=f"{self.persons_list[idx]['name']} não pôde formar dupla.").pack()
 
-                for idx in unpaired_indices:
-                    tk.Label(unpaired_window, text=f"{self.persons_list[idx]['name']} não pôde formar dupla.").pack()
+
 
 
     def delete_person_window(self):
