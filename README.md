@@ -10,7 +10,7 @@
 
 
 ## Sobre 
-Usar o algoritmo de contage de investimentos para sugerir pares de trabalho baseados nos gostos dos empregados, isto ajudará a que se entendam melhor e facilitará a cooperação entre eles.
+Usar o algoritmo de contage de inversões para sugerir pares de trabalho baseados nos gostos dos empregados, isto ajudará a que se entendam melhor e facilitará a cooperação entre eles.
 Serão sugeridos todos os possíveis pares que possam ser gerados entre empregados com gostos similares baseados num número máximo de investimentos para que se considerem similares, se é que uma pessoa não tem gostos similares a ninguém isto será avisado junto com os nomes dessas pessoas.
 
 ## Screenshots
