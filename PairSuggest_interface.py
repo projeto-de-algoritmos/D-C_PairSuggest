@@ -39,7 +39,7 @@ class EmployeePairingApp:
         name_entry = tk.Entry(add_person_window)
         name_entry.pack()
 
-        preferences_label = tk.Label(add_person_window, text="Preferências (1 to 10):")
+        preferences_label = tk.Label(add_person_window, text="Preferências (1 ao 10):")
         preferences_label.pack()
 
         preferences_entries = []
